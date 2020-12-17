@@ -22,7 +22,7 @@ if os.path.dirname(sys.argv[0]):
 API_KEY = 'YOUR_API_KEY'
 REQUEST_BASE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?'
 URL = 'https://www.nychealthandhospitals.org/covid-19-testing-sites/'
-ADDRESS_REGEX = '(.*)\n(.*)\s+(NY|New York)\s+(\d{5})'
+ADDRESS_REGEX = '(.*)\n(.*)\s+(NY|New York)[,\s]+(\d{5})'
 ADDRESS_REGEX_BACKUP = '(.*)(?:\nMonday)'
 BOUNDS = '40.9532067,-74.222055|40.5015477,-73.5560226'
 
