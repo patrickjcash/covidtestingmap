@@ -118,12 +118,16 @@ for site in all_sites['features']:
 
 print("Parsing data into geojson file...") 
 
-# Serializing json  
+# serialize json  
 json_object = json.dumps(all_sites, indent = 4)
 
 print("Writing geojson data to file...") 
-  
-# Writing to sample.json 
+
+# write json to file
+with open("../sites_with_waits.json", "w") as outfile:
+	outfile.write(json_object)
+
+# write json to file with JS helper function wrapper
 with open("../cvmap.json", "w") as outfile:
 	outfile.write("cvfeed_callback(")
 	outfile.write(json_object)
