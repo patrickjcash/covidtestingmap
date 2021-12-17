@@ -47,7 +47,7 @@ sites = []
 
 for site_candidate in site_candidates:
 	# parse soup data 
-	name = site_candidate.get_text().partition('\n')[0].strip()
+	name = site_candidate.get_text().strip().partition('\n')[0]
 	detail = str(site_candidate)
 
 	address_search = re.search(ADDRESS_REGEX,site_candidate.get_text())
